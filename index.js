@@ -70,92 +70,87 @@ const init = () => {
             break;
         }
       });
-
-    function createEngineer() {
-      inquirer
-        .prompt([
-          {
-            type: "input",
-            name: "name",
-            message: "What is the engineer's name?",
-          },
-          {
-            type: "input",
-            name: "id",
-            message: "What is the engineer's id?",
-          },
-          {
-            type: "input",
-            name: "email",
-            message: "What is the engineer's E-mail address?",
-          },
-          {
-            type: "input",
-            name: "github",
-            message: "What is the engineer's github?",
-          },
-        ])
-        .then((answers) => {
-          const engineer = new Engineer(
-            answers.id,
-            answers.name,
-            answers.email,
-            answers.github
-          );
-          teamMemberObjArr.push(engineer);
-
-          addEmployees();
-        });
-    }
-    function createIntern() {
-      inquirer
-        .prompt([
-          {
-            type: "input",
-            name: "name",
-            message: "What is the intern's name?",
-          },
-          {
-            type: "input",
-            name: "id",
-            message: "What is the intern's id?",
-          },
-          {
-            type: "input",
-            name: "email",
-            message: "What is the intern's E-mail address?",
-          },
-          {
-            type: "input",
-            name: "school",
-            message: "What is the intern's school?",
-          },
-        ])
-        .then((answers) => {
-          const intern = new Intern(
-            answers.id,
-            answers.name,
-            answers.email,
-            answers.school
-          );
-          teamMemberObjArr.push(intern);
-
-          addEmployees();
-        });
-    }
   }
+  function createEngineer() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "name",
+          message: "What is the engineer's name?",
+        },
+        {
+          type: "input",
+          name: "id",
+          message: "What is the engineer's id?",
+        },
+        {
+          type: "input",
+          name: "email",
+          message: "What is the engineer's E-mail address?",
+        },
+        {
+          type: "input",
+          name: "github",
+          message: "What is the engineer's github?",
+        },
+      ])
+      .then((answers) => {
+        const engineer = new Engineer(
+          answers.id,
+          answers.name,
+          answers.email,
+          answers.github
+        );
+        teamMemberObjArr.push(engineer);
+
+        addEmployees();
+      });
+  }
+  function createIntern() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "name",
+          message: "What is the intern's name?",
+        },
+        {
+          type: "input",
+          name: "id",
+          message: "What is the intern's id?",
+        },
+        {
+          type: "input",
+          name: "email",
+          message: "What is the intern's E-mail address?",
+        },
+        {
+          type: "input",
+          name: "school",
+          message: "What is the intern's school?",
+        },
+      ])
+      .then((answers) => {
+        const intern = new Intern(
+          answers.id,
+          answers.name,
+          answers.email,
+          answers.school
+        );
+        teamMemberObjArr.push(intern);
+
+        addEmployees();
+      });
+  }
+
   function buildTeam() {
-    fs.writeFile(
-      "./dist/index.html",
-      "utf-8",
-      renderTeam(teamMemberObjArr)
-      // , (err) => {
-      //   if (err) console.log(err);
-      //   else {
-      //     console.log("success");
-      //   }
-      // }
-    );
+    fs.writeFile("./dist/index.html", renderTeam(teamMemberObjArr), (err) => {
+      if (err) console.log(err);
+      else {
+        console.log("success");
+      }
+    });
   }
 
   createManager();
