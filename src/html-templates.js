@@ -6,14 +6,14 @@ const makeTeam = (team) => {
     <div class="card mb-4 rounded-4 shadow" style="width: 20rem">
       <div class="card-body bg-primary text-white">
         <h3 class="card-title">${manager.name}</h3>
-        <h3 class="card-title ">🧑‍💼 Manager</h3>
+        <h4 class="card-title ">🧑‍💼 Manager</h4>
       </div>
       <div class = "bg-light p-2">
       <ul class="list-group list-group-flush m-3 border bg-secondary">
-        <li class="list-group-item">ID:${manager.id}</li>
+        <li class="list-group-item">ID: ${manager.id}</li>
        
-          <li class="list-group-item"> Email:<a href="mailto:${manager.email}">${manager.email}</a></li>
-        <li class="list-group-item">Office number:${manager.officeNumber}
+          <li class="list-group-item"> Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+        <li class="list-group-item">Office number: ${manager.officeNumber}
         </li>
       </ul>
     </div>
@@ -29,14 +29,14 @@ const makeTeam = (team) => {
     <div class="card mb-4 rounded-3 shadow" style="width: 20rem">
       <div class="card-body bg-primary text-white">
         <h3 class="card-title">${engineer.name}</h3>
-        <h3 class="card-title">🤖 Engineer</h3>
+        <h4 class="card-title">🤖 Engineer</h4>
       </div>
       <div class = "bg-light p-2">
         <ul class="list-group list-group-flush m-3 border bg-secondary">
-        <li class="list-group-item">ID:${engineer.id}</li>
+        <li class="list-group-item">ID: ${engineer.id}</li>
        
-        <li class="list-group-item"> Email:<a href="mailto:${engineer.email}">${engineer.email}</a></li>
-        <li class="list-group-item"> Github:<a href="https://github.com/${engineer.github}"
+        <li class="list-group-item"> Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+        <li class="list-group-item"> Github: <a href="https://github.com/${engineer.github}"
           >${engineer.github}</a></li>
       </ul>
       </div>
@@ -51,13 +51,13 @@ const makeTeam = (team) => {
     <div class="card mb-4 rounded-3 shadow" style="width: 20rem">
       <div class="card-body bg-primary text-white ">
         <h3 class="card-title">${intern.name}</h3>
-        <h3 class="card-title">🧑‍🎓 Intern</h3>
+        <h4 class="card-title">🧑‍🎓 Intern</h4>
       </div>
       <div class = "bg-light p-2">
         <ul class="list-group list-group-flush m-3 border bg-secondary">
-        <li class="list-group-item">ID:${intern.id}</li>       
-          <li class="list-group-item"> Email:<a href="mailto:${intern.email}" >${intern.email}</a></li>
-        <li class="list-group-item"> School:${intern.school}</li>
+        <li class="list-group-item">ID: ${intern.id}</li>       
+          <li class="list-group-item"> Email: <a href="mailto:${intern.email}" >${intern.email}</a></li>
+        <li class="list-group-item"> School: ${intern.school}</li>
       </ul>
       </div>
     </div>
