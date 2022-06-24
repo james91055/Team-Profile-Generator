@@ -45,7 +45,7 @@ const makeTeam = (team) => {
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>My Team</title>
      </head>
     <body>
         ${makeTeam(team)}
