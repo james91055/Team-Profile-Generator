@@ -34,8 +34,8 @@ const init = () => {
       ])
       .then((answers) => {
         const manager = new Manager(
-          answers.id,
           answers.name,
+          answers.id,
           answers.email,
           answers.officeNumber
         );
@@ -97,8 +97,8 @@ const init = () => {
       ])
       .then((answers) => {
         const engineer = new Engineer(
-          answers.id,
           answers.name,
+          answers.id,
           answers.email,
           answers.github
         );
@@ -133,8 +133,8 @@ const init = () => {
       ])
       .then((answers) => {
         const intern = new Intern(
-          answers.id,
           answers.name,
+          answers.id,
           answers.email,
           answers.school
         );

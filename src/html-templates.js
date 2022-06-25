@@ -13,7 +13,7 @@ const makeTeam = (team) => {
         <li class="list-group-item">ID: ${manager.id}</li>
        
           <li class="list-group-item"> Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
-        <li class="list-group-item">Office number: ${manager.officeNumber}
+        <li class="list-group-item">Office Number: ${manager.officeNumber}
         </li>
       </ul>
     </div>
@@ -62,8 +62,6 @@ const makeTeam = (team) => {
       </div>
     </div>
   </div>
-
-  
 
         `;
   };
